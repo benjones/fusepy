@@ -87,7 +87,7 @@ if not _libfuse_path:
         # libfuse dependency
         _libiconv = ctypes.CDLL(find_library('iconv'), ctypes.RTLD_GLOBAL)
 
-        _libfuse_path = (find_library('fuse4x') or find_library('osxfuse') or
+        _libfuse_path = (find_library('fuse_t') or find_library('fuse4x') or find_library('osxfuse') or
                          find_library('fuse'))
     elif _system == 'Windows':
         try:
